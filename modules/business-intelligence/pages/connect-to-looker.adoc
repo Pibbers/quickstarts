@@ -1,0 +1,125 @@
+= Connect Teradata Vantage to Power BI Desktop
+:experimental:
+:page-author: Kevin Bogusch, Paul Ibberson
+:page-email: paul.ibberson2@teradata.com
+:page-revdate: January 23rd, 2023
+:description: Connect Teradata Vantage to Google Looker.
+:keywords: data warehouses, compute storage separation, teradata, vantage, cloud data platform, object storage, business intelligence, enterprise analytics, google looker, looker
+:tabs:
+:page-image-directory: connect-looker
+
+
+== Overview
+_Disclaimer: This guide includes content from both Google and Teradata product documentation._
+
+This guide describes the procedure to connect Teradata Vantage to Google Looker, which can create interactive visualizations, graphs, and charts based on data in Vantage. The procedure offered in this guide has been implemented and tested by Teradata. However, it is offered on an as-is basis. Google does not provide validation of Teradata Vantage using Google Looker.
+
+
+.About Google Looker
+Google Looker works with Teradata Vantage as a data source either on Google Cloud or on-premises. The connectivity between the system is accomplished with JDBC drivers. Any of the recent versions of Teradata Vantage and JDBC drivers work with Looker.
+
+.About Teradata Vantage
+Vantage is the modern cloud platform that unifies data warehouses, data lakes, and analytics into a single connected ecosystem.
+
+Vantage combines descriptive, predictive, prescriptive analytics, autonomous decision-making, ML functions, and visualization tools into a unified, integrated platform that uncovers real-time business intelligence at scale, no matter where the data resides.
+
+Vantage enables companies to start small and elastically scale compute or storage, paying only for what they use, harnessing low-cost object stores and integrating their analytic workloads.
+
+Vantage supports R, Python, Teradata Studio, and any other SQL-based tools. You can deploy Vantage across public clouds, on-premises, on optimized or commodity infrastructure, or as-a-service.
+
+See the https://docs.teradata.com/[documentation] for more information on Teradata Vantage.
+
+
+== Prerequisites
+You should be familiar with Google Cloud concepts and Teradata Vantage.
+
+You will need the following accounts and systems:
+
+* Google Cloud service account (you can create free account),
+* Google Looker instance,
+* Google Looker account,
+* https://downloads.teradata.com/download/connectivity/jdbc-driver[Teradata JDBC drivers[] (which must be loaded by the Looker support team)  
+
+* A Teradata Vantage instance with a user and password. The user must have permission to data that can be used by Google Looker. Vantage must be accessible from Google Looker.
++
+include::ROOT:partial$vantage.express.options.adoc[]
+
+
+== Getting Started
+These are the steps to connect Teradata Vantage to Google Looker and then show results within Looker.
+
+* Validate Teradata Vantage
+* Add Teradata JDBC Drivers to Google Looker
+* Connect Google Looker to Vantage
+* Run a query in Google Looker
+* Create a LookML project in Google Looker (optional)
+
+=== Validate Teradata Vantage
+This step shows how to verify an existing Vantage system running in Google Cloud. You can leverage a Vantage system elsewhere, as long as it is available with an external IP address. (This topic is outside the scope of this guide.)
+
+Login into https://console.cloud.google.com/[Google Cloud console] with your user credentials
+
+image::{page-image-directory}/gcp-login.png[GCP Console, width=500]
+
+Ensure the Teradata Vantage compute engine is up and running.
+
+image::{page-image-directory}/gcp-verify-vantage.png[Ensure Vantage is running, width=500]
+
+Note the external IP address.  This will be used for the JDBC connection.
+
+=== Add Teradata JDBC Drivers to Google Looker
+Download the latest version of the  https://downloads.teradata.com/download/connectivity/jdbc-driver[Teradata JDBC drivers[] 
+
+.Request installation of the Teradata JDBC drivers
+Google Looker is provided as-a-service. Users do not have access to Looker administration.
+
+You will need to email the Looker support team and request that the Teradata JDBC drivers are added to your Looker instance. This will make Teradata Vantage available as a data source within your Looker instance.
+
+=== Connect Google Looker to Teradata Vantage
+* Login into your Google Looker account. 
+
+image::{page-image-directory}/looker-logon.png[Logon to Looker, width=500]
+
+* Create a Database connection, which is located in Admin > Connections > Add Connection > Database Connection.
+
+image::{page-image-directory}/create-connection.png[Connections, width=500]
+
+image::{page-image-directory}/create-connection-2.png[Add connection, width=500]
+
+* Enter the Database connection details.  The Remote Host is the external IP address of the Vantage system from above.  Enter port 1025 in order to access the Vantage system.
+
+image::{page-image-directory}/connection-settings.png[Connection settings, width=500]
+
+* If you are using a character set besides the default, a parameter can be added in the Additional params section.
+
+image::{page-image-directory}/connection-settings-2.png[Character set, width=500]
+
+* Click on Test These Settings to verify connectivity.
+
+image::{page-image-directory}/test-settings.png[Test connection settings, width=500]
+
+=== Run a query in Google Looker
+* Open SQL Runner in Looker, which is located under Develop > SQL Runner.
+
+image::{page-image-directory}/sql-runner.png[Open SQL Runner, width=500]
+
+* You can now run SQL queries in Vantage. Select a Connection and Schema (user or database).
+
+image::{page-image-directory}/run-query.png[Run a query, width=500]
+
+* Write your SQL query.
+
+* Click on Run at the right-side top corner.
+
+* The results are displayed in the Results pane. You can also view the data in different visualizations.
+
+image::{page-image-directory}/results.png[Results, width=500]
+
+== Next steps
+You can combine data from many sources with Power BI Desktop. Look at the following links for more information.
+
+* https://docs.microsoft.com/en-us/power-bi/desktop-what-is-desktop[What is Power BI Desktop?]
+* https://docs.microsoft.com/en-us/power-bi/desktop-data-sources[Data Sources in Power BI Desktop]
+* https://docs.microsoft.com/en-us/power-bi/desktop-shape-and-combine-data[Shape and Combine Data with Power BI Desktop]
+* https://docs.microsoft.com/en-us/power-bi/desktop-connect-excel[Connect to Excel workbooks in Power BI Desktop]
+* https://docs.microsoft.com/en-us/power-bi/desktop-enter-data-directly-into-desktop[Enter data directly into Power BI Desktop]
