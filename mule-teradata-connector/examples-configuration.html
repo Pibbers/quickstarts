@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Integrate Teradata Vantage with KNIME Analytics Platform :: Teradata Getting Started</title>
-    <link rel="canonical" href="https://quickstarts.teradata.com/other-integrations/integrate-teradata-vantage-with-knime.html">
-    <meta name="description" content="Integrate Teradata Vantage with KNIME.">
-    <meta name="keywords" content="data warehouses, compute storage separation, teradata, vantage, cloud data platform, object storage, business intelligence, enterprise analytics,">
+    <title>Using Anypoint Studio to Configure Teradata Connector - Mule 4 :: Teradata Getting Started</title>
+    <link rel="canonical" href="https://quickstarts.teradata.com/mule-teradata-connector/examples-configuration.html">
+    <meta name="description" content="Use Teradata Connector for MuleSoft's Anypoint Studio.">
+    <meta name="keywords" content="data warehouses, compute storage separation, teradata, vantage, cloud data platform, object storage, business intelligence, enterprise analytics, mule, mulesoft, teradata connector, anypoint studio.">
     <meta name="generator" content="Antora 3.0.1">
     <link rel="stylesheet" href="../_/css/site.css">
-<meta property="og:title" content="Integrate Teradata Vantage with KNIME Analytics Platform :: Teradata Getting Started">
+<meta property="og:title" content="Using Anypoint Studio to Configure Teradata Connector - Mule 4 :: Teradata Getting Started">
 <meta property="og:type" content="article" />
-<meta property="og:description" content="Integrate Teradata Vantage with KNIME." />
+<meta property="og:description" content="Use Teradata Connector for MuleSoft&#x27;s Anypoint Studio." />
 <meta property="og:site_name" content="Teradata Getting Started">
 <meta property="og:image:height" content="336"/>
 <meta property="og:image" content="https://www.teradata.com/Content/Assets/default/teradata-logo-social.png">
-<meta property="og:url" content="https://quickstarts.teradata.com/other-integrations/integrate-teradata-vantage-with-knime.html">
+<meta property="og:url" content="https://quickstarts.teradata.com/mule-teradata-connector/examples-configuration.html">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="https://www.teradata.com/Content/Assets/default/teradata-logo-social.png" />
@@ -1110,7 +1110,7 @@ span.search-result-highlight {
     <a class="nav-link" href="../install-teradata-studio-on-mac-m1-m2.html">Use Teradata Studio/Express on Apple Mac M1/M2</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="configure-a-teradata-vantage-connection-in-dbeaver.html">Configure a Teradata Vantage connection in DBeaver</a>
+    <a class="nav-link" href="../other-integrations/configure-a-teradata-vantage-connection-in-dbeaver.html">Configure a Teradata Vantage connection in DBeaver</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -1140,7 +1140,7 @@ span.search-result-highlight {
     <a class="nav-link" href="../create-parquet-files-in-object-storage.html">Create Parquet files in object storage</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="execute-airflow-workflows-that-use-dbt-with-teradata-vantage.html">Execute Airflow workflows that use dbt with Teradata Vantage</a>
+    <a class="nav-link" href="../other-integrations/execute-airflow-workflows-that-use-dbt-with-teradata-vantage.html">Execute Airflow workflows that use dbt with Teradata Vantage</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cloud-guides/integrate-teradata-vantage-to-salesforce-using-amazon-appflow.html">Connect Teradata Vantage to Salesforce using Amazon Appflow</a>
@@ -1214,8 +1214,8 @@ span.search-result-highlight {
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../business-intelligence/create-stunning-visualizations-in-power-bi-using-data-from-teradata-vantage.html">Create Vizualizations in Power BI using Vantage</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="integrate-teradata-vantage-with-knime.html">Integrate Teradata Vantage with KNIME Analytics Platform</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../other-integrations/integrate-teradata-vantage-with-knime.html">Integrate Teradata Vantage with KNIME Analytics Platform</a>
   </li>
 </ul>
   </li>
@@ -1263,8 +1263,7 @@ span.search-result-highlight {
 <button class="nav-toggle"></button>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li>Analyze data</li>
-    <li><a href="integrate-teradata-vantage-with-knime.html">Integrate Teradata Vantage with KNIME Analytics Platform</a></li>
+    <li><a href="examples-configuration.html">Using Anypoint Studio to Configure Teradata Connector - Mule 4</a></li>
   </ul>
 </nav>
 </div>
@@ -1272,168 +1271,266 @@ span.search-result-highlight {
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
       <div class="page-controls">
       <a href="https://github.com/Teradata/quickstarts/issues"><div class="report-an-issue">Report an issue</div></a>
-      <a href="https://github.com/Pibbers/quickstarts/blob/main/modules/other-integrations/pages/integrate-teradata-vantage-with-knime.adoc"><div class="edit-on-github">Edit on GitHub</div></a>
+      <a href="https://github.com/Pibbers/quickstarts/blob/main/modules/mule-teradata-connector/pages/examples-configuration.adoc"><div class="edit-on-github">Edit on GitHub</div></a>
     </div>
   <div class="toc-menu">
   </div>
 </aside>
 <article class="doc">
-<h1 class="page">Integrate Teradata Vantage with KNIME Analytics Platform</h1>
-<p>Author: <a href="mailto:Jeremy.yu@teradata.com">Jeremy Yu</a><br/>
-Last updated: May 18th, 2022</p>
-<div class="sect1">
-<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<h1 class="page">Using Anypoint Studio to Configure Teradata Connector - Mule 4</h1>
+<p>Author: <a href="mailto:tan.nguyen@teradata.com">Tan Nguyen</a><br/>
+Last updated: February 13th, 2023</p>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This how-to describes how to connect to Terdata Vantage from KNIME Analytics Platform.</p>
+<p>Anypoint Studio (Studio) editors help you design and update your Mule applications, properties, and configuration files.</p>
 </div>
-<div class="sect2">
-<h3 id="_about_knime_analytics_platform"><a class="anchor" href="#_about_knime_analytics_platform"></a>About KNIME Analytics Platform</h3>
 <div class="paragraph">
-<p>KNIME Analytics Platform is a data science workbench. It supports analytics on various data sources, including Teradata Vantage.</p>
+<p>To add and configure a connector in Studio:</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Access to a Teradata Vantage instance, version 17.10 or higher.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If you need a new instance of Vantage, you can install a free version called Vantage Express in the cloud on <a href="../vantage.express.gcp.html" class="xref page">Google Cloud</a>, <a href="../run-vantage-express-on-microsoft-azure.html" class="xref page">Azure</a>, and <a href="../run-vantage-express-on-aws.html" class="xref page">AWS</a>. You can also run Vantage Express on your local machine using <a href="../getting.started.vmware.html" class="xref page">VMware</a>, <a href="../getting.started.vbox.html" class="xref page">VirtualBox</a>, or <a href="../getting.started.utm.html" class="xref page">UTM</a>.
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>KNIME installed locally. See <a href="https://www.knime.com/installation">KNIME installation instructions</a> for details.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_integration_procedure"><a class="anchor" href="#_integration_procedure"></a>Integration Procedure</h2>
-<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Go to <a href="https://downloads.teradata.com/download/connectivity/jdbc-driver" class="bare">https://downloads.teradata.com/download/connectivity/jdbc-driver</a> (first time users will need to register) and download the latest version of the JDBC driver.</p>
+<p><a href="#create-mule-project">Create a Mule Project</a>.</p>
 </li>
 <li>
-<p>Unzip the downloaded file. You will find <code>terajdbc4.jar</code> file.</p>
+<p><a href="#add-connector-to-project">Add the connector to your Mule project</a>.</p>
 </li>
 <li>
-<p>In KNIME, click on <code>File → Preference</code>. Under <code>Databases</code>, click <code>Add</code>:</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/integrate-teradata-vantage-with-knime/add-jar.png" alt="Add jar" width="75%">
-</div>
-</div>
+<p><a href="#configure-input-source">Configure a source for the connector&#8217;s flow</a>.</p>
 </li>
 <li>
-<p>Register a new database driver. Provide values for <code>ID</code>, <code>Name</code> and <code>Description</code> like below. Click on <code>Add file</code> and point to the .jar file you downloaded earlier. Click on the <code>Find driver classes</code> and the <code>Driver class:</code> should populate with the <code>jdbc.TeraDriver</code>:</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/integrate-teradata-vantage-with-knime/register-driver.png" alt="Register driver" width="75%">
-</div>
-</div>
+<p><a href="#add-connector-operation">Add a connector operation to the flow</a>.</p>
 </li>
 <li>
-<p>Click <code>Apply and Close</code>:</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/integrate-teradata-vantage-with-knime/apply-and-close.png" alt="Apply and close" width="75%">
+<p><a href="#configure-global-element">Configure a global element for the connector</a>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>When you run the connector, you can view the app log to check for problems, as described in <a href="#view-app-log">View the App Log</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you are new to configuring connectors in Studio, see <a href="https://docs.mulesoft.com/connectors/introduction/intro-config-use-studio">Using Anypoint Studio to Configure a Connector</a>. If, after reading this topic, you need additional information about the connector fields, see the <a href="reference.html" class="xref page">Teradata Connector Reference</a>.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="create-mule-project"><a class="anchor" href="#create-mule-project"></a>Create a Mule Project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Studio, create a new Mule project in which to add and configure the connector:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Studio, select <strong>File &gt; New &gt; Mule Project</strong>.</p>
 </li>
 <li>
-<p>To test the connection, create a new KNIME workflow and add a <code>Database Reader (legacy)</code> node by dragging it to the workspace to the right:</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/integrate-teradata-vantage-with-knime/test-connection-1.png" alt="Test connection step 1" width="75%">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/integrate-teradata-vantage-with-knime/test-connection-2.png" alt="Test connection step 2" width="75%">
-</div>
-</div>
-</li>
-<li>
-<p>Right-click on the <code>Database Reader (legacy)</code> to configure settings. Select <code>com.teradata.jdbc.Teradriver</code> from the drop-down:</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/integrate-teradata-vantage-with-knime/start-configuration.png" alt="Start configuration" width="75%">
-</div>
-</div>
-</li>
-<li>
-<p>Enter the name of the Vantage server and login mechanism, e.g.:</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/integrate-teradata-vantage-with-knime/enter-configuration.png" alt="Enter configuration" width="75%">
-</div>
-</div>
-</li>
-<li>
-<p>To test connection, enter SQL statement in box in lower right. For example, enter <code>SELECT * FROM DBC.DBCInfoV</code> and click <code>Apply</code> to close the dialog:</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/integrate-teradata-vantage-with-knime/test-connection-apply.png" alt="Test connection apply" width="75%">
-</div>
-</div>
-</li>
-<li>
-<p>Execute the node to test the connection:</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/integrate-teradata-vantage-with-knime/execute-node.png" alt="Execute node" width="75%">
-</div>
-</div>
-</li>
-<li>
-<p>The node will show a green light when run successfully. Right-click and select <code>Data from Database</code> to view the results:</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/integrate-teradata-vantage-with-knime/view-results.png" alt="View results" width="75%">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/integrate-teradata-vantage-with-knime/view-results-final.png" alt="View results" width="75%">
-</div>
-</div>
+<p>Enter a name for your Mule project and click <strong>Finish</strong>.</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<h2 id="add-connector-to-project"><a class="anchor" href="#add-connector-to-project"></a>Add the Connector to Your Mule Project</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This how-to demonstrats how to connect from KNIME Analytics Platform to Teradata Vantage.</p>
+<p>Add Teradata Connector to your Mule project to automatically populate the XML code with the connector&#8217;s namespace and schema location and to add the required dependencies to the project&#8217;s <code>pom.xml</code> file:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <strong>Mule Palette</strong> view, click <strong>(X) Search in Exchange</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Add Dependencies to Project</strong> window, type <code>teradata</code> in the search field.</p>
+</li>
+<li>
+<p>Click <strong>Teradata Connector</strong> in <strong>Available modules</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Add</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Finish</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Adding a connector to a Mule project in Studio does not make that connector available to other projects in your Studio workspace.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_further_reading"><a class="anchor" href="#_further_reading"></a>Further reading</h2>
+<h2 id="configure-input-source"><a class="anchor" href="#configure-input-source"></a>Configure a Source</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A source initiates a flow when a specified condition is met.
+You can configure one of these input sources to use with Teradata Connector:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Teradata &gt; On Table Row</strong><br>
+Initiates a flow by selecting from a table at a regular interval and generates one message per obtained row</p>
+</li>
+<li>
+<p><strong>HTTP &gt; Listener</strong><br>
+Initiates a flow each time it receives a request on the configured host and port</p>
+</li>
+<li>
+<p><strong>Scheduler</strong><br>
+Initiates a flow when a time-based condition is met</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, to configure an <strong>On Table Row</strong> source, follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <strong>Mule Palette</strong> view, select <strong>Teradata &gt; On Table Row</strong>.</p>
+</li>
+<li>
+<p>Drag <strong>On Table Row</strong> to the Studio canvas.</p>
+</li>
+<li>
+<p>In the <strong>On Table Row</strong> configuration screen, optionally change the value of the <strong>Display Name</strong> field.</p>
+</li>
+<li>
+<p>Click the plus sign (<strong>+</strong>) next to the <strong>Connector configuration</strong> field to configure a global element that can be used by all instances of the source in the app.</p>
+</li>
+<li>
+<p>In the <strong>Teradata Config</strong> window, on the <strong>General</strong> tab, specify the database connection information for the connector.</p>
+</li>
+<li>
+<p>On the <strong>Transactions</strong> tab, optionally specify the transaction isolation, or XA transactions, when connecting to the database.</p>
+</li>
+<li>
+<p>On the <strong>Advanced</strong> tab, optionally specify connection pooling and reconnection information, including a reconnection strategy.</p>
+</li>
+<li>
+<p>Click <strong>Test Connection</strong> to confirm that Mule can connect with the specified database.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong> to close the window.</p>
+</li>
+<li>
+<p>In the <strong>On Table Row</strong> configuration screen, in <strong>Table</strong>, specify the name of the table to select from.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-connector-operation"><a class="anchor" href="#add-connector-operation"></a>Add a Connector Operation to the Flow</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you add a connector operation to your flow, you immediately define a specific operation for that connector to perform.</p>
+</div>
+<div class="paragraph">
+<p>To add an operation for Teradata Connector, follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <strong>Mule Palette</strong> view, select <strong>Teradata Connector</strong> and then select the desired operation.</p>
+</li>
+<li>
+<p>Drag the operation onto the Studio canvas and to the right of the input source.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following screenshot shows the Teradata Connector operations in the Mule Palette view of Anypoint Studio:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/teradata-operations.png" alt="Teradata Connector Operations">
+</div>
+<div class="title">Figure 1. Teradata Connector Operations</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure_a_global_element_for_the_connector"><a class="anchor" href="#_configure_a_global_element_for_the_connector"></a>Configure a Global Element for the Connector</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you configure a connector, it’s best to configure a global element that all instances of that connector in the app can use.</p>
+</div>
+<div class="paragraph">
+<p>To configure the global element for Teradata Connector, follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the operation in the Studio canvas.</p>
+</li>
+<li>
+<p>In the configuration screen for the operation, click the plus sign (<strong>+</strong>) next to the <strong>Connector configuration</strong> field to access the global element configuration fields.</p>
+</li>
+<li>
+<p>In the <strong>Teradata Config</strong> window, on the <strong>General</strong> tab, specify the database connection information for the connector.</p>
+</li>
+<li>
+<p>On the <strong>Transactions</strong> tab, optionally specify the transaction isolation, or XA transactions, when connecting to the database.</p>
+</li>
+<li>
+<p>On the <strong>Advanced</strong> tab, optionally specify connection pooling and reconnection information, including a reconnection strategy.</p>
+</li>
+<li>
+<p>Click <strong>Test Connection</strong> to confirm that Mule can connect with the specified database.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following screenshot shows the Teradata Connector <strong>Global Element Configuration</strong> window in Anypoint Studio:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/teradata-global-configuration.png" alt="Teradata Connector Global Element Configuration">
+</div>
+<div class="title">Figure 2. Teradata Connector Global Element Configuration</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="view-app-log"><a class="anchor" href="#view-app-log"></a>View the App Log</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To check for problems, you can view the app log as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you’re running the app from Anypoint Platform, the output is visible in the Anypoint Studio console window.</p>
+</li>
+<li>
+<p>If you’re running the app using Mule from the command line, the app log is visible in your OS console.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Unless the log file path is customized in the app’s log file (<code>log4j2.xml</code>), you can also view the app log in the default location <code>MULE_HOME/logs/&lt;app-name&gt;.log</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_see_also"><a class="anchor" href="#_see_also"></a>See Also</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../ml.html" class="xref page">Train ML models in Vantage using only SQL</a></p>
+<p><a href="reference.html" class="xref page">Teradata Connector Reference</a></p>
+</li>
+<li>
+<p><a href="https://help.mulesoft.com">MuleSoft Help Center</a></p>
 </li>
 </ul>
 </div>
