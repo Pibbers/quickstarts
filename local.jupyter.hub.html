@@ -3,17 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Deploy Teradata Jupyter extensions to JupyterHub :: Teradata Getting Started</title>
+    <title>Deploy Teradata Jupyter extensions to JupyterHub :: Teradata Developers Portal</title>
     <link rel="canonical" href="https://quickstarts.teradata.com/local.jupyter.hub.html">
     <meta name="description" content="Deploy Teradata Jupyter extensions in customer JupyterHub clusters">
     <meta name="keywords" content="data warehouses, compute storage separation, teradata, vantage, cloud data platform, java applications, business intelligence, enterprise analytics, jupyter, teradatasql, ipython-sql, teradatasqlalchemy">
     <meta name="generator" content="Antora 3.0.1">
     <link rel="stylesheet" href="./_/css/site.css">
+<meta http-equiv="Content-Language" content="en">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta property="og:title" content="Deploy Teradata Jupyter extensions to JupyterHub :: Teradata Getting Started">
+<meta property="og:title" content="Deploy Teradata Jupyter extensions to JupyterHub :: Teradata Developers Portal">
 <meta property="og:type" content="article" />
 <meta property="og:description" content="Deploy Teradata Jupyter extensions in customer JupyterHub clusters" />
-<meta property="og:site_name" content="Teradata Getting Started">
+<meta property="og:site_name" content="Teradata Developers Portal">
 <meta property="og:image:height" content="336"/>
 <meta property="og:image" content="https://www.teradata.com/Content/Assets/default/teradata-logo-social.png">
 <meta property="og:url" content="https://quickstarts.teradata.com/local.jupyter.hub.html">
@@ -22,21 +23,22 @@
 <meta property="twitter:image" content="https://www.teradata.com/Content/Assets/default/teradata-logo-social.png" />
 <meta name="twitter:site" content="@teradata" />
 
-<!-- Google Tag Manager -->
-<script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T7Q6CLV');
-</script>
 <!-- End Google Tag Manager -->
 <link rel="stylesheet" href="./_/css/search.css">
 <link rel="stylesheet" href="./_/css/styles.css">
+<link rel="stylesheet" href="./_/css/fontawesome.all.min.css">
 <link rel="stylesheet" href="./_/css/newnavbar.css" >
 <link rel="stylesheet" href="./_/css/navbar.css">
-<style>
 
+<link rel="preload" href="./_/css/mt.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./_/css/mt.css"></noscript>
+
+<style>
+.footer-nav .footer_social .icon-social {
+    width: 44px;
+    height: 44px;
+    margin: 0 12px 0 0;
+}
   /*New Style*/
   .header-utility {
     height: 28px;
@@ -150,6 +152,7 @@ button {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+  font-family: Inter, sans-Serif;
 }
 
 .header-nav-mobile__menu,
@@ -498,7 +501,7 @@ article.doc {
 
 .doc a,
 .doc a:hover {
-  color: #007373;
+  color: #3053F4;
 }
 
 .article {
@@ -512,7 +515,7 @@ main.article {
 */
 .toc .toc-menu a:hover {
 /*  color: #f3743f; */
-  color: #FF5F02;
+  color: #3053F4;
 }
 
 .nav-container {
@@ -682,20 +685,74 @@ aside.toc.sidebar {
 
 .is-current-page>.nav-link,
 .is-current-page>.nav-text {
-  font-weight: initial;
-  color: #007373;
+  font-weight: 400;
+  color: #171A2C;
 }
 
 .is-current-page {
-  background: rgba(133, 221, 220, 0.1);
-  border-radius: 0px 16px 16px 0px;
+  background: #ECECFE;
+  border-radius: 16px 16px 16px 16px;
+  padding: 2px 10px;
+  margin-left: -10px;
 }
+.nav-item.is-active{
+  padding: 2px 10px;
+  margin-left: -10px;
+  width: 170px;
+}
+
+/* Hover effect in menu */
+.nav-item.is-active a:hover {
+   text-decoration: none;
+}
+.nav-item.is-active[data-depth="2"]:not(:has(> ul.nav-list > li[data-depth="3"])):hover {
+    background: rgba(30, 29, 30, 0.08);
+    border-radius: 16px;
+    padding: 2px 10px;
+    margin-left: -10px;
+    width: 170px;
+}
+
+.nav-item.is-active[data-depth="3"]:hover {
+    background: rgba(30, 29, 30, 0.08);
+    border-radius: 16px;
+    padding: 2px 10px;
+    margin-left: -10px;
+    width: 170px;
+}
+
+.nav-item.is-active[data-depth="2"]:has(> ul.nav-list > li[data-depth="3"]):hover {
+    background: transparent;  
+}
+
+.nav-item.is-active[data-depth="2"]:last-child:hover {
+    background: rgba(30, 29, 30, 0.08);
+    border-radius: 16px;
+    padding: px 10px;
+    margin-left: -10px;
+    width: 125%;
+}
+/* Hover effect in menu */
+
 
 .toc .toc-menu a.is-active {
-  border-left-color: #FF5F02;
-  color: rgba(0, 0, 0, 0.87);
+  border-left-color: #3053F4;
+  color: rgba(51, 68, 62, 1);
+  font-weight: 700;
 }
-
+.toc .toc-menu a {
+    border-left: 2px solid rgba(48, 83, 244, 0.2);
+}
+.sidebar.toc .toc-menu a {
+  line-height: 20px;
+}
+ .toc .toc-menu h3 {
+  color: #333A3E;
+  font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.15px;
+  }
 .page-controls {
   padding-top: 12px;
   font-size: 14px;
@@ -734,7 +791,7 @@ aside.toc.sidebar {
 }
 
 .doc .admonitionblock.note {
-  background-color: #eaf3f2;
+  background-color: #DEE0FF;
 }
 
 .doc .admonitionblock.question {
@@ -753,7 +810,7 @@ aside.toc.sidebar {
 
 .doc .admonitionblock.note .icon {
   background-color: initial;
-  color: #007373;
+  color: #DEE0FF;
 }
 
 .doc .admonitionblock.question .icon {
@@ -787,8 +844,27 @@ aside.toc.sidebar {
 }
 
 .doc .admonitionblock .icon i {
-  font-family: Arial;
+  font-family: Inter;
   font-size: 16px;
+}
+.doc .admonitionblock td.icon i.icon-tip {
+  background-color: transparent;
+  color: #00233C;
+}
+.doc .admonitionblock td.icon i.icon-note {
+  background-color: transparent;
+  color: #00233C;
+}
+.doc .admonitionblock td.icon i.icon-important {
+    background-color: transparent;
+    color: #FF8F00; 
+}
+.doc .admonitionblock td.icon i {
+  padding: 0;
+}
+
+.doc .admonitionblock td.icon i::after{
+  text-transform: none;
 }
 
 .doc .admonitionblock p,
@@ -861,11 +937,19 @@ span.search-result-highlight {
 }
 
 </style>
-
-
 <script async type="text/javascript" src="https://assets.teradata.com/js/Celebrus/bsci.js"></script>
 <link rel="icon" href="./_/img/favicon.ico" type="image/x-icon">
-  </head>
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T7Q6CLV');
+</script>
+<script src="./_/js/lang.js"></script>
+<script src="./_/js/translations/mt.js"></script>
+<script src="./_/js/redirect.js"></script>  </head>
   <body class="article">
 <!-- Adding CDN to use sql-formatter for unpkg -->
 <script src="https://unpkg.com/sql-formatter/dist/sql-formatter.min.js"></script>
@@ -875,7 +959,9 @@ span.search-result-highlight {
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7Q6CLV" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
-<!-- New Navbar -->
+
+<!-- Navbar -->
+    <!-- New Navbar -->
       <nav>
         <div class="header-nav-wrapper">
           <section class="header-utility nav-3 background-grayLight color-navy d-none d-xl-flex">
@@ -886,6 +972,22 @@ span.search-result-highlight {
                     <a href="https://teradata.com" target="_blank" class="tcom">Teradata.com</a>
                   </li>
                 </ul>
+                <div class="td-language-selector dropdown1">
+                  <button onclick="langOptions()" class="td-language-selector__toggle selected">
+                    Global 
+                  </button>
+                  <div id="myDropdown" class="nav-2 td-language-selector__dropdown dropdown-content1">
+                    <li lang="en-US" class="td-language-selector__menu-item">
+                      <a href="#" class="td-language-selector__location no-underline active-lan">Global</a>
+                    </li>
+                    <li lang="ja-JP" class="td-language-selector__menu-item" onclick="switchLanguage('ja')">
+                      <a href="#" class="td-language-selector__location no-underline">日本</a>
+                    </li>
+                    <li lang="es-MX" class="td-language-selector__menu-item" onclick="switchLanguage('es')">
+                      <a href="#" class="td-language-selector__location no-underline">Español</a>
+                    </li>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -913,7 +1015,8 @@ span.search-result-highlight {
                       <li>
                         <button href="" onclick="docs()" class="header-nav__main-menu__link dropbtn">Docs</button>
                         <div id="myDocsDropdown" class="dropdown-content">
-                          <a href="https://docs.teradata.com/p/VantageCloud/Lake" class="dropdown-item mt">VantageCloud Lake Documentation</a>
+                          <a href="https://docs.teradata.com/p/VantageCloud/Lake" class="dropdown-item"  style="margin-top: 30px;">VantageCloud Lake Documentation</a>
+                          <a href="https://developers.teradata.com/ai-unlimited/" class="dropdown-item">AI Unlimited</a>
                           <a href="https://docs.teradata.com/" class="dropdown-item">All Documentation</a> 
                         </div>  
                       </li>
@@ -937,7 +1040,16 @@ span.search-result-highlight {
                       </li>
                     </ul>  
                     <div class="head-nav__alt-menu-wrapper header-nav__element">
+                    
                       <ul class="header-nav__alt-menu d-flex justify-content-end list">
+                        <li class="button-free-demo">
+                          <a class="call-to-action-button-secondary" href="https://www.teradata.com/getting-started/demos/clearscape-analytics" target="_blank" title="Browse Content" rel="nofollow">
+                            Try for free
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <path d="M9.35008 11.9669L8.63341 11.2669L11.4334 8.46686H2.66675V7.46686H11.4334L8.61675 4.6502L9.33341 3.9502L13.3501 7.96686L9.35008 11.9669Z" fill="#00233C"/>
+                            </svg>
+                          </a>  
+                        </li>
                         <li>
                           <section class="navbar-search" id="searchtextbox"> 
                             <div class="navbar-item">
@@ -1003,6 +1115,9 @@ span.search-result-highlight {
                               <a class="nav-2 py-4 d-block color-slate" href="https://docs.teradata.com/p/VantageCloud/Lake">VantageCloud Lake Documentation</a>
                             </li>
                             <li>
+                              <a class="nav-2 py-4 d-block color-slate" href="https://developers.teradata.com/ai-unlimited/">AI Unlimited</a>
+                            </li>
+                            <li>
                               <a class="nav-2 py-4 d-block color-slate" href="https://docs.teradata.com/">All Documentation</a>
                             </li>
                           </ul>
@@ -1048,6 +1163,14 @@ span.search-result-highlight {
                     </li>
                   </ul>
                   <footer>
+                    <div class="container-wide header-nav-mobile__menu-listing-ul" style="padding: 14px 16px;">
+                     <a class="call-to-action-button-secondary" href="https://www.teradata.com/getting-started/demos/clearscape-analytics" target="_blank" title="Browse Content" rel="nofollow">
+                      Try for free
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M9.35008 11.9669L8.63341 11.2669L11.4334 8.46686H2.66675V7.46686H11.4334L8.61675 4.6502L9.33341 3.9502L13.3501 7.96686L9.35008 11.9669Z" fill="#00233C"></path>
+                      </svg>
+                     </a>  
+                    </div>
                     <div class="header-nav-mobile__sub-menu background-grayLight mt-6 py-6 container-wide">
                       <ul class="row list">
                         <li class="col-6">
@@ -1062,15 +1185,80 @@ span.search-result-highlight {
              <div class="page-blackout"></div>
           </section>
         </div>
-
       </nav>
   </nav>
+  <style>
+    .active-lan{
+      pointer-events: none; 
+      cursor: not-allowed;
+    }
+  </style>  <!-- Navbar -->
+
+<!-- Possible Banner -->
+<div class="possible-banner-2">
+  <div class="text-section">
+      <p class="text-1">
+        <span class="display-1">If you imagine it, envision it, create it... Teradata makes it Possible. Join us. </span>
+        <span class="display-2">"If you imagine it...Teradata makes it Possible. </span>
+        <a class="register-now" href="https://www.teradata.com/events/possible" target="_blank" aria-label="If you imagine it, envision it, create it... Teradata makes it Possible. Join us." data-gtm-category="banner" data-gtm-action="leaderboard" data-gtm-label="Register now" data-intellimize-exp-417218923="true">
+          Register now.
+        </a> 
+      </p>
+  </div>
+</div>
+<style>
+.possible-banner-2{
+  background: #DFE1F9;
+  position: relative;
+  height: 50px;
+  top: 20px;
+  flex-shrink: 0;
+  display:none;
+}
+.text-section{
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+}
+.text-1{
+  color: #171A2C;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.register-now{
+  color: #171A2C;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+  .display-2{
+    display: none;
+  }
+@media (max-width: 600px) {
+  .text-section {
+    padding: 1px 0px 1px 0px;  
+  }
+  .display-1{
+    display: none;
+  }
+  .display-2{
+    display: block;
+  }
+}
+</style><!-- Possible Banner -->
 
   <script>
     var sectionElement = document.querySelector(".navbar-search");
     var devElement = document.querySelector(".dev");
     if (sectionElement.innerHTML.trim() === "") {
-      devElement.style.marginRight = "-225px"; 
+      devElement.style.marginRight = "-65px"; 
     }
 
     /* Script for desktop dropdowns */
@@ -1188,13 +1376,69 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
   </script>
-<div class="body">
+<style>
+  .active-lan{
+    color: #ff5f02;
+    font-weight: 600;
+  }
+  .dropdown1 {
+    position: relative;
+    display: inline-block;
+  }
+  .td-language-selector {
+    position: relative;
+    padding: 6px 0;
+  }
+    .td-language-selector__toggle {
+    color: inherit;
+    align-items: center;
+    position: relative;
+    width: auto;
+    padding: 0 1.2rem;
+    display: flex;
+    z-index: 1;
+    transition: .25s;
+  }
+  .td-language-selector ul {
+    background: #f6f7fb;
+    border-radius: 2px;
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    color: #333a3e;
+    position: absolute;
+    top: 150%;
+    right: 0;
+    padding: 28px 32px;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .25s ease;
+  }
+  .dropdown-content1 {
+    display: none;
+    position: absolute;
+    background: #f6f7fb;
+    min-width: 124px; 
+    overflow: auto;
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    z-index: 1;
+    top: 150%;
+    right: 0;
+    padding: 28px 32px;
+    transition: all .25s ease;
+  }
+  .show {display: block;}
+
+  .me-4 {
+    margin-right: 1rem!important;
+  }
+</style><div class="body">
 <div class="nav-container" data-component="ROOT" data-version="master">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-<ul class="nav-list">
+    <div id="en">
+      <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
@@ -1240,6 +1484,15 @@ document.addEventListener("DOMContentLoaded", function () {
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">ClearScape Analytics Experience</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="getting-started-with-csae.html">Getting started with ClearScape Analytics Experience</a>
+  </li>
+</ul>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
@@ -1274,6 +1527,18 @@ document.addEventListener("DOMContentLoaded", function () {
     <a class="nav-link" href="select-the-right-data-ingestion-tools-for-teradata-vantage.html">Select the right data ingestion solution for Teradata Vantage</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="airflow/airflow.html">Use Apache Airflow with Teradata Vantage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="airflow/airflow-azure-to-teradata-transfer-operator-doc.html">Data Transfer from Azure Blob to Teradata Vantage Using Apache Airflow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="airflow/airflow-s3-to-teradata-transfer-operator-doc.html">Data Transfer from Amazon S3 to Teradata Vantage Using Apache Airflow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="other-integrations/execute-airflow-workflows-that-use-dbt-with-teradata-vantage.html">Execute Airflow workflows that use dbt with Teradata Vantage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dbt.html">dbt with Teradata Vantage</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1289,6 +1554,9 @@ document.addEventListener("DOMContentLoaded", function () {
     <a class="nav-link" href="elt/use-airbyte-to-load-data-from-external-sources-to-teradata-vantage.html">Use Airbyte to load data from external sources to Teradata Vantage</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="elt/terraform-airbyte-provider.html">Manage ELT pipelines as code with Terraform and Airbyte on Teradata Vantage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="elt/transforming-external-data-loaded-via-airbyte-in-teradata-vantage-using-dbt.html">Transform data Loaded with Airbyte using dbt</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1296,9 +1564,6 @@ document.addEventListener("DOMContentLoaded", function () {
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="create-parquet-files-in-object-storage.html">Create Parquet files in object storage</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="other-integrations/execute-airflow-workflows-that-use-dbt-with-teradata-vantage.html">Execute Airflow workflows that use dbt with Teradata Vantage</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cloud-guides/integrate-teradata-vantage-to-salesforce-using-amazon-appflow.html">Connect Teradata Vantage to Salesforce using Amazon Appflow</a>
@@ -1361,6 +1626,9 @@ document.addEventListener("DOMContentLoaded", function () {
     <a class="nav-link" href="modelops/deploy-and-monitor-machine-learning-models-with-teradata-modelops-and-git.html">ModelOps - Import and Deploy your first GIT Model</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="modelops/execute-airflow-workflows-with-clearscape-analytics-modelops-model-factory-solution.html">Execute Airflow workflows with ModelOps - Model Factory Solution Accelerator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cloud-guides/sagemaker-with-teradata-vantage.html">Use AWS SageMaker with Teradata Vantage</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1382,61 +1650,543 @@ document.addEventListener("DOMContentLoaded", function () {
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Teradata AI Unlimited</span>
+    <span class="nav-text">VantageCloud Lake</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ai-unlimited/getting-started-with-ai-unlimited.html">Getting Started with Teradata AI Unlimited</a>
+    <a class="nav-link" href="getting-started-with-vantagecloud-lake.html">Getting Started with VantageCloud Lake</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Deploy locally using Docker</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="ai-unlimited/install-ai-unlimited-workspaces-docker.html">Deploy and Setup Teradata AI Unlimited Workspace Service Using Docker</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="ai-unlimited/install-ai-unlimited-interface-docker.html">Deploy a Teradata AI Unlimited Interface Using Docker</a>
-  </li>
-</ul>
+    <a class="nav-link" href="vantagecloud-lake/vantagecloud-lake-demo-jupyter-docker.html">Run Teradata Jupyter Notebook Demos for VantageCloud Lake in Docker</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ai-unlimited/using-ai-unlimited-workspace-cli.html">Use Teradata AI Unlimited With Workspace Client</a>
+    <a class="nav-link" href="vantagecloud-lake/vantagecloud-lake-demos-visual-studio-code.html">Run Teradata Jupyter Notebook Demos for VantageCloud Lake in Visual Studio Code</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Deploy on AWS</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="ai-unlimited/deploy-ai-unlimited-aws-cloudformation.html">Deploy Teradata AI Unlimited Workspace Service and Interface using AWS CloudFormation Template</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="ai-unlimited/ai-unlimited-aws-permissions-policies.html">Control AWS Access and Permissions using Custom Permissions and Policies</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="ai-unlimited/deploy-ai-unlimited-awscli-cloudformation.html">Deploy CloudFormation Template from AWS CLI</a>
-  </li>
-</ul>
+    <a class="nav-link" href="vantagecloud-lake/vantagecloud-lake-demo-jupyter-sagemaker.html">Run Teradata Jupyter Notebook Demos for VantageCloud Lake in Amazon SageMaker</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ai-unlimited/running-sample-ai-unlimited-workload.html">Run a Sample Workload in JupyterLab Using Teradata AI Unlimited</a>
+    <a class="nav-link" href="vantagecloud-lake/vantagecloud-lake-demo-jupyter-google-cloud-vertex-ai.html">Run Teradata Jupyter Notebook Demos for VantageCloud Lake in Google Cloud Vertex AI</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Reference</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="ai-unlimited/ai-unlimited-magic-reference.html">Teradata AI Unlimited JupyterLab Magic Command Reference</a>
+    <a class="nav-link" href="vantagecloud-lake/vantagecloud-lake-demo-jupyter-azure.html">Run Teradata Jupyter Notebook Demos for VantageCloud Lake in Microsoft Azure</a>
   </li>
 </ul>
   </li>
 </ul>
   </li>
 </ul>
+    </div>
+    <ul class="nav-list">
+      <div id="ja">
+  <li class="nav-item is-active is-current-path" data-depth="0">
+    <ul class="nav-list">
+      <li class="nav-item is-active is-current-path" data-depth="0">
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">はじめに</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/teradata-vantage-engine-architecture-and-concepts.html">Teradata Vantage エンジンのアーキテクチャと概念</a>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item is-active is-current-path" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">Vantageへのアクセス</span>
+    <ul class="nav-list">
+      <li class="nav-item is-current-path" data-depth="2">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">ローカル</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="3">
+        <a class="nav-link" href="../general/getting.started.vmware.html">VMware で Vantage Express を実行する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="3">
+        <a class="nav-link" href="../general/getting.started.vbox.html">VirtualBox で Vantage Express を実行する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="3">
+        <a class="nav-link" href="../general/getting.started.utm.html">UTM で Vantage Express を実行する方法</a>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item" data-depth="2">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">クラウド インフラストラクチャ</span>
+        <ul class="nav-list">
+          <li class="nav-item is-active" data-depth="3">
+            <a class="nav-link" href="../general/run-vantage-express-on-aws.html">AWS で Vantage Express を実行する方法</a>
+          </li>
+          <li class="nav-item is-active" data-depth="3">
+            <a class="nav-link" href="../general/vantage.express.gcp.html">Google Cloud で Vantage Express を実行する方法</a>
+          </li>
+          <li class="nav-item is-active" data-depth="3">
+            <a class="nav-link" href="../general/run-vantage-express-on-microsoft-azure.html">Azure で Vantage Express を実行する方法</a>
+          </li>
+        </ul>
+      </li>
+          <li class="nav-item" data-depth="2">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">ClearScape Analytics Experience</span>
+        <ul class="nav-list">
+          <li class="nav-item is-active" data-depth="3">
+            <a class="nav-link" href="../general/getting-started-with-csae.html">ClearScape Analytics Experience を始める</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item is-active" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">Vantage への接続</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/install-teradata-studio-on-mac-m1-m2.html">Apple Mac M1/M2でTeradata Studio/Expressを使用する</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../other-integrations/configure-a-teradata-vantage-connection-in-dbeaver.html">DBeaverでのTeradata Vantageの接続設定</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">ODBCの設定</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="3">
+        <a class="nav-link" href="../general/odbc.ubuntu.html">Ubuntu</a>
+      </li>
+    </ul>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item is-active" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">データの管理</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/nos.html">オブジェクトストレージに保存されたクエリデータ</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/select-the-right-data-ingestion-tools-for-teradata-vantage.html">Teradata Vantageに適したデータ取り込みソリューションを選択する</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/dbt.html">Teradata Vantage dbt</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/advanced-dbt.html">Teradata Vantage を使用した高度な dbt のユースケース</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../modelops/using-feast-feature-store-with-teradata-vantage.html">Teradata VantageとFEASTで拡張性の高いフィーチャーストアを実現</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../other-integrations/getting.started.dbt-feast-teradata-pipeline.html">dbt と FEAST を使用して Teradata Vantage でフィーチャストアを構築する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../elt/use-airbyte-to-load-data-from-external-sources-to-teradata-vantage.html">Airbyte を使用して外部ソースから Teradata Vantage にデータをロードする方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../elt/transforming-external-data-loaded-via-airbyte-in-teradata-vantage-using-dbt.html">dbt を使用して Airbyte に読み込まれたデータを変換する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../tools-and-utilities/run-bulkloads-efficiently-with-teradata-parallel-transporter.html">TPTでデータロード</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/create-parquet-files-in-object-storage.html">VantageからのオブジェクトストアへのParquetファイルの作成</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../other-integrations/execute-airflow-workflows-that-use-dbt-with-teradata-vantage.html">dbtを使用するAirflowワークフローをTeradata Vantageを使って実行してみる</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/integrate-teradata-vantage-to-salesforce-using-amazon-appflow.html">Amazon Appflowを使用してVantageからSalesforceへ接続する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/segment.html">Twilio Segmentからイベントを保存する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/connect-azure-data-share-to-teradata-vantage.html">Azure Data Share を Teradata Vantage に接続する</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/integrate-teradata-vantage-with-google-cloud-data-catalog.html">Teradata VantageとGoogle Cloud Data Catalogを統合する</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../other-integrations/configure-a-teradata-vantage-connection-in-datahub.html">DataHubでのTeradata Vantageの接続設定</a>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item is-active" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">アプリケーションの作成</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/jdbc.html">JDBC を使用して Vantage に接続する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/teradatasql.html">Python を使用して Vantage に接続する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/mule.jdbc.example.html">Mule サービスから Teradata Vantage をクエリ</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../query-service/send-queries-using-rest-api.html">REST APIを使ってVantageにクエリーを送信する方法</a>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item is-active" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">データの分析</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/jupyter.html">Jupyter NotebookからVantageを利用する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/local.jupyter.hub.html">Teradata Jupyter ExtensionsをJupyter Hubにデプロイする方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/ml.html">データベース分析関数を使用したVantageでのMLモデルのトレーニング</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/sto.html">Vantage でスクリプトを実行する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/perform-time-series-analysis-using-teradata-vantage.html">時系列分析の実行</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../modelops/deploy-and-monitor-machine-learning-models-with-teradata-modelops-and-byom.html">ModelOps - 初めてのBYOMモデルのインポートとデプロイ</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../modelops/deploy-and-monitor-machine-learning-models-with-teradata-modelops-and-git.html">ModelOps - 初めてのGITモデルのインポートとデプロイ</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/sagemaker-with-teradata-vantage.html">VantageからSageMakerのAPIを実行する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/use-teradata-vantage-with-azure-machine-learning-studio.html">VantageのデータをAzure Machine Learning Studioで使用する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/integrate-teradata-jupyter-extensions-with-google-vertex-ai.html">Google Vertex AIとTeradata Jupyterエクステンションを統合する</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/integrate-teradata-jupyter-extensions-with-sagemaker.html">Teradata Jupyter Extentionsと SageMakerNotebookインスタンスの統合</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../business-intelligence/create-stunning-visualizations-in-power-bi-using-data-from-teradata-vantage.html">Vantage を使用して Power BI で視覚化を作成する</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../other-integrations/integrate-teradata-vantage-with-knime.html">KNIME Analytics PlatformとVantageを統合する</a>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item is-active" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">VantageCloud Lake</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/getting-started-with-vantagecloud-lake.html">VantageCloud Lake の使用を開始する</a>
+      </li>
+       <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../vantagecloud-lake/vantagecloud-lake-demo-jupyter-docker.html">Docker で VantageCloud Lake の Teradata Jupyter Notebook デモを実行する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../vantagecloud-lake/vantagecloud-lake-demos-visual-studio-code.html">Visual Studio Code で VantageCloud Lake の Teradata Jupyter Notebook デモを実行する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../vantagecloud-lake/vantagecloud-lake-demo-jupyter-sagemaker.html">Amazon SageMaker で VantageCloud Lake の Teradata Jupyter Notebook デモを実行する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../vantagecloud-lake/vantagecloud-lake-demo-jupyter-google-cloud-vertex-ai.html">Google Cloud Vertex AI で VantageCloud Lake の Teradata Jupyter Notebook デモを実行する方法</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../vantagecloud-lake/vantagecloud-lake-demo-jupyter-azure.html">Microsoft AzureでVantageCloud LakeのTeradata Jupyter Notebookデモを実行する方法</a>
+      </li>
+    </ul>
+      </li>
+    </ul>
+      </li>
+    </ul>
   </li>
-</ul>
+</div>
+          </ul>
+    <ul class="nav-list">
+      <div id="es">
+  <li class="nav-item is-active is-current-path" data-depth="0">
+    <ul class="nav-list">
+      <li class="nav-item is-active is-current-path" data-depth="0">
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">Introducción</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/teradata-vantage-engine-architecture-and-concepts.html">Arquitectura y conceptos del motor de Teradata Vantage</a>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item is-active is-current-path" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">Obtener acceso a Vantage</span>
+    <ul class="nav-list">
+      <li class="nav-item is-current-path" data-depth="2">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">En su instalación local</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="3">
+        <a class="nav-link" href="../general/getting.started.vmware.html">Vantage Express en VMware</a>
+      </li>
+      <li class="nav-item is-active" data-depth="3">
+        <a class="nav-link" href="../general/getting.started.vbox.html">Vantage Express en VirtualBox</a>
+      </li>
+      <li class="nav-item is-active" data-depth="3">
+        <a class="nav-link" href="../general/getting.started.utm.html">Vantage Express en UTM</a>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item" data-depth="2">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">En su infraestructura en la nube</span>
+        <ul class="nav-list">
+          <li class="nav-item is-active" data-depth="3">
+            <a class="nav-link" href="../general/run-vantage-express-on-aws.html">Vantage Express en AWS</a>
+          </li>
+          <li class="nav-item is-active" data-depth="3">
+            <a class="nav-link" href="../general/vantage.express.gcp.html">Vantage Express en Google Cloud</a>
+          </li>
+          <li class="nav-item is-active" data-depth="3">
+            <a class="nav-link" href="../general/run-vantage-express-on-microsoft-azure.html">Vantage Express en Azure</a>
+          </li>
+        </ul>
+      </li>
+          <li class="nav-item" data-depth="2">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">ClearScape Analytics Experience</span>
+        <ul class="nav-list">
+          <li class="nav-item is-active" data-depth="3">
+            <a class="nav-link" href="../general/getting-started-with-csae.html">ClearScape Analytics Experience</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item is-active" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">Conectarse a Vantage</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/install-teradata-studio-on-mac-m1-m2.html">Utilice Teradata Studio/Express en Apple Mac M1/M2</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../other-integrations/configure-a-teradata-vantage-connection-in-dbeaver.html">Configurar una conexión a Teradata Vantage en DBeaver</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">Configure ODBC</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="3">
+        <a class="nav-link" href="../general/odbc.ubuntu.html">Ubuntu</a>
+      </li>
+    </ul>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item is-active" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">Administrar datos</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/nos.html">Consultar datos almacenados en el almacenamiento de objetos</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/select-the-right-data-ingestion-tools-for-teradata-vantage.html">Seleccionar la solución de ingesta de datos adecuada para Teradata Vantage</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/dbt.html">Teradata Vantage dbt</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/advanced-dbt.html">Casos de uso avanzados de dbt con Teradata Vantage</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../modelops/using-feast-feature-store-with-teradata-vantage.html">Crear un almacén de funciones FEAST en Teradata Vantage</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../other-integrations/getting.started.dbt-feast-teradata-pipeline.html">Utilizar dbt y FEAST para crear un almacén de funciones en Teradata Vantage</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../elt/use-airbyte-to-load-data-from-external-sources-to-teradata-vantage.html">Utilizar Airbyte para cargar datos de fuentes externas en Teradata Vantage</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../elt/transforming-external-data-loaded-via-airbyte-in-teradata-vantage-using-dbt.html">Transformar datos cargados con Airbyte mediante dbt</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../tools-and-utilities/run-bulkloads-efficiently-with-teradata-parallel-transporter.html">Cargar datos con TPT</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/create-parquet-files-in-object-storage.html">Crear archivos Parquet en el almacenamiento de objetos</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../other-integrations/execute-airflow-workflows-that-use-dbt-with-teradata-vantage.html">Ejecutar flujos de trabajo de Airflow que utilizan dbt con Teradata Vantage</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/integrate-teradata-vantage-to-salesforce-using-amazon-appflow.html">Conectar Teradata Vantage a Salesforce mediante Amazon Appflow</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/segment.html">Almacenar eventos de Twilio Segment</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/connect-azure-data-share-to-teradata-vantage.html">Conectar Azure Data Share a Teradata Vantage</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/integrate-teradata-vantage-with-google-cloud-data-catalog.html">Integrar Teradata Vantage con Google Cloud Data Catalog</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../other-integrations/configure-a-teradata-vantage-connection-in-datahub.html">Configurar una conexión a Teradata Vantage en DataHub</a>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item is-active" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">Crear aplicaciones</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/jdbc.html">Conectarse a Vantage mediante JDBC</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/teradatasql.html">Conectarse a Vantage mediante Python</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/mule.jdbc.example.html">Consultar Teradata Vantage desde un servicio Mule</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../query-service/send-queries-using-rest-api.html">Enviar consultas mediante REST API</a>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item is-active" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">Analizar datos</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/jupyter.html">Utilizar Vantage desde un Jupyter Notebook</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/local.jupyter.hub.html">Implementar extensiones de Teradata Jupyter en JupyterHub</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/ml.html">Entrenar modelos de ML en Vantage usando funciones analíticas de bases de datos</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/sto.html">Ejecutar scripts en Vantage</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/perform-time-series-analysis-using-teradata-vantage.html">Realizar análisis de series temporales mediante Teradata Vantage</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../modelops/deploy-and-monitor-machine-learning-models-with-teradata-modelops-and-byom.html">ModelOps - importar e implementar su primer modelo BYOM</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../modelops/deploy-and-monitor-machine-learning-models-with-teradata-modelops-and-git.html">ModelOps - importar e implemente su primer modelo GIT</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/sagemaker-with-teradata-vantage.html">Utilizar AWS SageMaker con Teradata Vantage</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/use-teradata-vantage-with-azure-machine-learning-studio.html">Utilizar Teradata Vantage con Azure Machine Learning Studio</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/integrate-teradata-jupyter-extensions-with-google-vertex-ai.html">Integrar las extensiones de Teradata Jupyter con Google Vertex AI</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../cloud-guides/integrate-teradata-jupyter-extensions-with-sagemaker.html">Integrar las extensiones de Teradata Jupyter con una instancia de cuaderno de SageMaker</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../business-intelligence/create-stunning-visualizations-in-power-bi-using-data-from-teradata-vantage.html">Crear visualizaciones en Power BI mediante Vantage</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../other-integrations/integrate-teradata-vantage-with-knime.html">Integrar Teradata Vantage con KNIME Analytics Platform</a>
+      </li>
+    </ul>
+      </li>
+      <li class="nav-item is-active" data-depth="1">
+        <button class="nav-item-toggle" title="nav-toggle" aria-label="nav-toogle"></button>
+        <span class="nav-text" style="cursor: pointer;">VantageCloud Lake</span>
+    <ul class="nav-list">
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../general/getting-started-with-vantagecloud-lake.html">Primeros pasos con VantageCloud Lake</a>
+      </li>
+       <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../vantagecloud-lake/vantagecloud-lake-demo-jupyter-docker.html">Ejecutar demostraciones de Teradata Jupyter Notebook para VantageCloud Lake en Docker</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../vantagecloud-lake/vantagecloud-lake-demos-visual-studio-code.html">Ejecutar demostraciones de Teradata Jupyter Notebook para VantageCloud Lake en Visual Studio Code</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../vantagecloud-lake/vantagecloud-lake-demo-jupyter-sagemaker.html">Ejecutar demostraciones de Teradata Jupyter Notebook para VantageCloud Lake en Amazon SageMaker</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../vantagecloud-lake/vantagecloud-lake-demo-jupyter-google-cloud-vertex-ai.html">Ejecutar demostraciones de Teradata Jupyter Notebook para VantageCloud Lake en Google Cloud Vertex AI</a>
+      </li>
+      <li class="nav-item is-active" data-depth="2">
+        <a class="nav-link" href="../vantagecloud-lake/vantagecloud-lake-demo-jupyter-azure.html">Ejecutar demostraciones de Teradata Jupyter Notebook para VantageCloud Lake en Microsoft Azure</a>
+      </li>
+    </ul>
+      </li>
+    </ul>
+      </li>
+    </ul>
+  </li>
+</div>
+          </ul>
   </nav>
 </div>
-<div class="nav-panel-explore" data-panel="explore">
+
+
+<script>
+  var path = document.location.href;
+  var matchResult = path.match(/\/(es|ja)\//);
+  var language;
+  if (matchResult) {
+    language = matchResult[1];
+  } else {
+    language = 'en';
+  }
+  console.log("language: ",language);
+  if (language === 'en'){
+    document.getElementById('ja').style.visibility = 'hidden';
+    document.getElementById('ja').style.display = 'none';
+    document.getElementById('es').style.visibility = 'hidden';
+    document.getElementById('es').style.display = 'none';
+  }
+
+  if (language === 'ja'){
+    document.getElementById('en').style.visibility = 'hidden';
+    document.getElementById('en').style.display = 'none';
+    document.getElementById('es').style.visibility = 'hidden';
+    document.getElementById('es').style.display = 'none';
+  }
+
+   if (language === 'es'){
+      document.getElementById('en').style.visibility = 'hidden';
+      document.getElementById('en').style.display = 'none';
+      document.getElementById('ja').style.visibility = 'hidden';
+      document.getElementById('ja').style.display = 'none';
+    }
+
+
+  var parts = path.split('/');
+  var pagina = parts[parts.length-2];
+  var elementosMenu = document.querySelectorAll('.nav-item a');
+  elementosMenu.forEach(function(elemento) {
+    if (elemento.href === path) {
+      elemento.parentNode.classList.add('is-current-page');
+    }
+  });
+</script>
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.nav-item-toggle');
+    buttons.forEach((button, index) => {
+        button.setAttribute('aria-label', `Toggle Button ${index + 1}`);
+    });
+});
+
+</script><div class="nav-panel-explore" data-panel="explore">
   <div class="context" style="visibility: hidden;">
     <span class="title">Getting Started Guides</span>
     <span class="version">master</span>
@@ -1465,14 +2215,14 @@ document.addEventListener("DOMContentLoaded", function () {
   </ul>
 </nav>
 </div>
+
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
-      <div class="page-controls">
-      <a href="https://github.com/Teradata/quickstarts/issues"><div class="report-an-issue">Report an issue</div></a>
-      <a href="https://github.com/Pibbers/quickstarts/blob/main/modules/ROOT/pages/local.jupyter.hub.adoc"><div class="edit-on-github">Edit on GitHub</div></a>
-    </div>
-  <div class="toc-menu">
-  </div>
+    <div class="page-controls">
+        <a href="https://github.com/Teradata/quickstarts/issues"><div class="report-an-issue">Report an issue</div></a>
+        <a href="https://github.com/Pibbers/quickstarts/blob/main/modules/ROOT/pages/local.jupyter.hub.adoc"><div class="edit-on-github">Edit on GitHub</div></a>
+          </div>
+  <div class="toc-menu"></div>
 </aside>
 <article class="doc">
 <h1 class="page">Deploy Teradata Jupyter extensions to JupyterHub</h1>
@@ -1766,12 +2516,42 @@ If you have any questions or need further assistance, please visit our <a href="
 </div>
 </article>
 <style>
+  .possible-banner-2{
+    display: block;
+  }
+.button-free-demo {
+  display: none;
+}
+
 @media screen and (min-width: 1024px){
   .body {
     margin-top: 55px;
     margin-bottom: 20px;
   }
 }
+.hljs-keyword, .hljs-selector-tag, .hljs-subst {
+    color: #383A42;
+}
+.hljs-meta {
+    color: #6C6C6C;
+}
+.hljs-doctag, .hljs-string {
+    color: #AD0F00;
+}
+.hljs-built_in, .hljs-builtin-name {
+    color: #17749B;
+}
+.hljs-literal, .hljs-number, .hljs-tag .hljs-attr, .hljs-template-variable, .hljs-variable {
+    color: #0A7C08;
+}
+
+.hljs-comment, .hljs-quote {
+    color: #8E6102;
+}
+.hljs-class .hljs-title, .hljs-type {
+    color: #004FFD;
+}
+
 
 .article {
 /*  background-color: #f5f5f5;*/
@@ -1786,11 +2566,16 @@ If you have any questions or need further assistance, please visit our <a href="
 .nav{
   background: #f5f5f5;
 }
+
+.doc .videoblock iframe, .doc .videoblock video {
+    height: 442px;
+    width: 589px;
+}
 </style>
   </div>
 </main>
 </div>
-<!-- Footer SVGs -->
+  <!-- Footer SVGs -->
 <svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   style="position: absolute; width: 0; height: 0; overflow: hidden;">
   <defs>
@@ -1840,7 +2625,20 @@ If you have any questions or need further assistance, please visit our <a href="
 </svg>
 
 
-<!--Old Footer markup -->
+<section class="linksOfInterest">
+  <div class="linksOfInterestTitle">Also of interest</div>
+  <ul>
+    <li class="linkOfInterest_1">
+      <a class="footerNavLink" href="https://www.teradata.com/platform/ai-ml" target="_self" rel="noreferrer">Drive ROI with Trusted AI today</a>
+    </li>
+    <li class="linkOfInterest_1">
+      <a class="footerNavLink" href="https://www.teradata.com/solutions/big-data" target="_self" rel="noreferrer">Big data</a>
+    </li>
+    <li class="linkOfInterest_1">
+      <a class="footerNavLink" href="https://www.teradata.com/insights/data-security" target="_self" rel="noreferrer">Become an expert at defending your data</a>
+    </li>
+  </ul>
+</section>
 
 <!-- New Footer -->
  <!--footer-->
@@ -1852,7 +2650,15 @@ If you have any questions or need further assistance, please visit our <a href="
                 <span class="h4 fontWeight-semiBold">Who we help</span>
                   <ul class="list">
                     <li>
+                      <a href="https://www.teradata.com/trusted-ai" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Trusted AI | /trusted-ai">
+                        Trusted AI
+                      </a>
+                    </li>
+                    <li>
                       <a href="https://www.teradata.com/Who-We-Help" data-celebrus="Footer Menu - Roles" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Roles | /Who-We-Help">Roles</a>
+                    </li>
+                    <li>
+                      <a href="https://www.teradata.com/Industries" data-celebrus="Footer Menu - Industries" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Industries | /Industries">Industries</a>
                     </li>
                     <li>
                       <a href="https://www.teradata.com/Partners" data-celebrus="Footer Menu - Partners" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Partners | /Partners">Partners</a>
@@ -1872,10 +2678,13 @@ If you have any questions or need further assistance, please visit our <a href="
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.teradata.com/Industries" data-celebrus="Footer Menu - Industries" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Industries | /Industries">Industries</a>
+                      <a href="https://www.teradata.com/solutions/business-use-cases" data-celebrus="Footer Menu - Solutions">Solutions</a>
                     </li>
                     <li>
                       <a href="https://www.teradata.com/Customers" data-celebrus="Footer Menu - Success stories" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Success stories | /Customers">Success stories</a>
+                    </li>
+                    <li>
+                      <a href="https://www.teradata.com/how-we-help/teradata-services" data-celebrus="Footer Menu - Services">Services</a>
                     </li>
                   </ul>
                 </div>
@@ -1888,15 +2697,18 @@ If you have any questions or need further assistance, please visit our <a href="
                         <a href="https://www.teradata.com/Platform" data-celebrus="Footer Menu - Platform" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Platform | /Platform">Platform</a>
                       </li>
                       <li>
-                        <a href="https://www.teradata.com/Platform/Use-Cases" data-celebrus="Footer Menu - Use cases" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Use cases | /Platform/Use-Cases">Use cases</a>
-                      </li>
-                      <li>
                         <a href="https://www.teradata.com/Platform/VantageCloud" data-celebrus="Footer Menu - VantageCloud" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="VantageCloud | /Platform/VantageCloud">VantageCloud</a>
                       </li>
                       <li>
                         <a href="https://www.teradata.com/Platform/ClearScape-Analytics" data-celebrus="Footer Menu - ClearScape Analytics" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="ClearScape Analytics | /Platform/ClearScape-Analytics">ClearScape Analytics</a>
                       </li>
                       <li>
+                        <a class="nav-2" href="https://www.teradata.com/platform/ai-ml" data-celebrus="">Unleash AI Innovation</a>
+                      </li>
+                      <li>
+                        <a href="https://www.teradata.com/platform/workloads" data-celebrus="Footer Menu - Workloads" >Workloads</a>
+                      </li>
+                     <li>
                         <a href="https://www.teradata.com/Platform/Deployment" data-celebrus="Footer Menu - Deployment" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Deployment | /Platform/Deployment">Deployment
                         </a>
                       </li>
@@ -1943,23 +2755,19 @@ If you have any questions or need further assistance, please visit our <a href="
                             </a>
                           </li>
                           <li>
-                            <a href="https://www.teradata.com/Insights?Topics=Big-Data" data-celebrus="Footer Menu - Big Data" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Big Data | /Insights?Topics=Big-Data">Big Data
+                            <a href="https://www.teradata.com/insights/cloud-data-analytics" data-celebrus="Footer Menu - Big Data" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Big Data | /Insights?Topics=Big-Data">Cloud data analytics
                             </a>
                           </li>
                           <li>
-                            <a href="https://www.teradata.com/Insights?Topics=Cloud" data-celebrus="Footer Menu - Cloud" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Cloud | /Insights?Topics=Cloud">Cloud
+                            <a href="https://www.teradata.com/insights/data-architecture" data-celebrus="Footer Menu - Cloud" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Cloud | /Insights?Topics=Cloud">Data architecture
                             </a>
                           </li>
                           <li>
-                            <a href="https://www.teradata.com/Insights?Topics=Data-Analytics" data-celebrus="Footer Menu - Data Analytics" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Data Analytics | /Insights?Topics=Data-Analytics">Data Analytics
+                            <a href="https://www.teradata.com/insights/data-platform" data-celebrus="Footer Menu - Data Analytics" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Data Analytics | /Insights?Topics=Data-Analytics">Data platform
                             </a>
                           </li>
                           <li>
-                            <a href="https://www.teradata.com/Insights?Topics=Data-Management" data-celebrus="Footer Menu - Data Management" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Data Management | /Insights?Topics=Data-Management">Data Management
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.teradata.com/Insights?Topics=Data-Science" data-celebrus="Footer Menu - Data Science" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Data Science | /Insights?Topics=Data-Science">Data Science
+                            <a href="https://www.teradata.com/insights/data-security" data-celebrus="Footer Menu - Data Management" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Data Management | /Insights?Topics=Data-Management">Data security
                             </a>
                           </li>
                           <li>
@@ -2057,12 +2865,29 @@ If you have any questions or need further assistance, please visit our <a href="
                               <span class="icon caret"></span>
                           </summary>
                           <ul class="pb-4 list">
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/trusted-ai" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Trusted AI | /trusted-ai">Trusted AI</a></li>
                               <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Who-We-Help" data-celebrus="">Roles</a></li>
-                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Partners" data-celebrus="">Partners</a></li>
-                              <li class="my-3"><a class="nav-2" href="https://teradata.my.site.com/teradataPRM/s/self-registration" data-celebrus="" target="_blank" rel="noopener">Partner registration</a></li>
-                              <li class="my-3"><a class="nav-2" href="https://teradata.my.site.com/teradataPRM/s/login/" data-celebrus="" target="_blank" rel="noopener">Partner portal login</a></li>
                               <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Industries" data-celebrus="">Industries</a></li>
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Partners" data-celebrus="">Partners</a></li>
+                              <li class="my-3">
+                                <a class="nav-2" href="https://teradata.my.site.com/teradataPRM/s/self-registration" data-celebrus="" target="_blank" rel="noopener">
+                                  Partner registration
+                                  <span class="material-symbols-outlined md-16 ms-2">
+                                    <img src="./_/img/small-external.svg" alt="External Icon" width="" height="">
+                                  </span>
+                                </a>
+                              </li>
+                              <li class="my-3">
+                                <a class="nav-2" href="https://teradata.my.site.com/teradataPRM/s/login/" data-celebrus="" target="_blank" rel="noopener">
+                                  Partner portal login
+                                  <span class="material-symbols-outlined md-16 ms-2">
+                                    <img src="./_/img/small-external.svg" alt="External Icon" width="" height="">
+                                  </span>
+                                </a>
+                              </li>
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/solutions/business-use-cases" >Solutions</a></li>
                               <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Customers" data-celebrus="">Success stories</a></li>
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/how-we-help/teradata-services">Services</a></li>
                           </ul>
                       </details>
                       <details>
@@ -2072,10 +2897,11 @@ If you have any questions or need further assistance, please visit our <a href="
                           </summary>
                           <ul class="pb-4 list">
                               <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform" data-celebrus="">Platform</a></li>
-                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform/Use-Cases" data-celebrus="">Use cases</a></li>
-                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform/VantageCloud" data-celebrus="">VantageCloud</a></li>
                               <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform/ClearScape-Analytics" data-celebrus="">ClearScape Analytics</a></li>
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/platform/ai-ml" data-celebrus="">Unleash AI Innovation</a></li>
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform/Use-Cases" data-celebrus="">Use cases</a></li>
                               <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform/Deployment" data-celebrus="">Deployment</a></li>
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform/VantageCloud" data-celebrus="">VantageCloud</a></li>
                           </ul>
                       </details>
                       <details>
@@ -2172,7 +2998,7 @@ If you have any questions or need further assistance, please visit our <a href="
   
           <div class="row footer-nav__baseline border-top-medium">
               <div class="col-12 col-lg-3 col-xl-4 px-lg-0">
-                  <span class="copyright">©2023 Teradata. All Rights Reserved</span>
+                  <span class="copyright">©2024 Teradata. All Rights Reserved</span>
               </div>
               <div class="col-12 col-lg-9 col-xl-8 d-flex justify-content-lg-end px-lg-0">
                   <ul class="d-flex flex-wrap justify-content-between nav-2 list">

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Page Not Found :: Teradata Getting Started</title>
+    <title>Page Not Found :: Teradata Developers Portal</title>
     <meta name="generator" content="Antora 3.0.1">
     <link rel="stylesheet" href="/_/css/site.css">
+<meta http-equiv="Content-Language" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta property="og:title" content="Page Not Found :: Teradata Getting Started">
+<meta property="og:title" content="Page Not Found :: Teradata Developers Portal">
 <meta property="og:type" content="article" />
 <meta property="og:description" content="" />
-<meta property="og:site_name" content="Teradata Getting Started">
+<meta property="og:site_name" content="Teradata Developers Portal">
 <meta property="og:image:height" content="336"/>
 <meta property="og:image" content="https://www.teradata.com/Content/Assets/default/teradata-logo-social.png">
 <meta property="og:url" content="">
@@ -19,21 +20,22 @@
 <meta property="twitter:image" content="https://www.teradata.com/Content/Assets/default/teradata-logo-social.png" />
 <meta name="twitter:site" content="@teradata" />
 
-<!-- Google Tag Manager -->
-<script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T7Q6CLV');
-</script>
 <!-- End Google Tag Manager -->
 <link rel="stylesheet" href="/_/css/search.css">
 <link rel="stylesheet" href="/_/css/styles.css">
+<link rel="stylesheet" href="/_/css/fontawesome.all.min.css">
 <link rel="stylesheet" href="/_/css/newnavbar.css" >
 <link rel="stylesheet" href="/_/css/navbar.css">
-<style>
 
+<link rel="preload" href="/_/css/mt.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/_/css/mt.css"></noscript>
+
+<style>
+.footer-nav .footer_social .icon-social {
+    width: 44px;
+    height: 44px;
+    margin: 0 12px 0 0;
+}
   /*New Style*/
   .header-utility {
     height: 28px;
@@ -147,6 +149,7 @@ button {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+  font-family: Inter, sans-Serif;
 }
 
 .header-nav-mobile__menu,
@@ -495,7 +498,7 @@ article.doc {
 
 .doc a,
 .doc a:hover {
-  color: #007373;
+  color: #3053F4;
 }
 
 .article {
@@ -509,7 +512,7 @@ main.article {
 */
 .toc .toc-menu a:hover {
 /*  color: #f3743f; */
-  color: #FF5F02;
+  color: #3053F4;
 }
 
 .nav-container {
@@ -679,20 +682,74 @@ aside.toc.sidebar {
 
 .is-current-page>.nav-link,
 .is-current-page>.nav-text {
-  font-weight: initial;
-  color: #007373;
+  font-weight: 400;
+  color: #171A2C;
 }
 
 .is-current-page {
-  background: rgba(133, 221, 220, 0.1);
-  border-radius: 0px 16px 16px 0px;
+  background: #ECECFE;
+  border-radius: 16px 16px 16px 16px;
+  padding: 2px 10px;
+  margin-left: -10px;
 }
+.nav-item.is-active{
+  padding: 2px 10px;
+  margin-left: -10px;
+  width: 170px;
+}
+
+/* Hover effect in menu */
+.nav-item.is-active a:hover {
+   text-decoration: none;
+}
+.nav-item.is-active[data-depth="2"]:not(:has(> ul.nav-list > li[data-depth="3"])):hover {
+    background: rgba(30, 29, 30, 0.08);
+    border-radius: 16px;
+    padding: 2px 10px;
+    margin-left: -10px;
+    width: 170px;
+}
+
+.nav-item.is-active[data-depth="3"]:hover {
+    background: rgba(30, 29, 30, 0.08);
+    border-radius: 16px;
+    padding: 2px 10px;
+    margin-left: -10px;
+    width: 170px;
+}
+
+.nav-item.is-active[data-depth="2"]:has(> ul.nav-list > li[data-depth="3"]):hover {
+    background: transparent;  
+}
+
+.nav-item.is-active[data-depth="2"]:last-child:hover {
+    background: rgba(30, 29, 30, 0.08);
+    border-radius: 16px;
+    padding: px 10px;
+    margin-left: -10px;
+    width: 125%;
+}
+/* Hover effect in menu */
+
 
 .toc .toc-menu a.is-active {
-  border-left-color: #FF5F02;
-  color: rgba(0, 0, 0, 0.87);
+  border-left-color: #3053F4;
+  color: rgba(51, 68, 62, 1);
+  font-weight: 700;
 }
-
+.toc .toc-menu a {
+    border-left: 2px solid rgba(48, 83, 244, 0.2);
+}
+.sidebar.toc .toc-menu a {
+  line-height: 20px;
+}
+ .toc .toc-menu h3 {
+  color: #333A3E;
+  font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.15px;
+  }
 .page-controls {
   padding-top: 12px;
   font-size: 14px;
@@ -731,7 +788,7 @@ aside.toc.sidebar {
 }
 
 .doc .admonitionblock.note {
-  background-color: #eaf3f2;
+  background-color: #DEE0FF;
 }
 
 .doc .admonitionblock.question {
@@ -750,7 +807,7 @@ aside.toc.sidebar {
 
 .doc .admonitionblock.note .icon {
   background-color: initial;
-  color: #007373;
+  color: #DEE0FF;
 }
 
 .doc .admonitionblock.question .icon {
@@ -784,8 +841,27 @@ aside.toc.sidebar {
 }
 
 .doc .admonitionblock .icon i {
-  font-family: Arial;
+  font-family: Inter;
   font-size: 16px;
+}
+.doc .admonitionblock td.icon i.icon-tip {
+  background-color: transparent;
+  color: #00233C;
+}
+.doc .admonitionblock td.icon i.icon-note {
+  background-color: transparent;
+  color: #00233C;
+}
+.doc .admonitionblock td.icon i.icon-important {
+    background-color: transparent;
+    color: #FF8F00; 
+}
+.doc .admonitionblock td.icon i {
+  padding: 0;
+}
+
+.doc .admonitionblock td.icon i::after{
+  text-transform: none;
 }
 
 .doc .admonitionblock p,
@@ -858,11 +934,19 @@ span.search-result-highlight {
 }
 
 </style>
-
-
 <script async type="text/javascript" src="https://assets.teradata.com/js/Celebrus/bsci.js"></script>
 <link rel="icon" href="/_/img/favicon.ico" type="image/x-icon">
-  </head>
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T7Q6CLV');
+</script>
+<script src="/_/js/lang.js"></script>
+<script src="/_/js/translations/mt.js"></script>
+<script src="/_/js/redirect.js"></script>  </head>
   <body class="status-404">
 <!-- Adding CDN to use sql-formatter for unpkg -->
 <script src="https://unpkg.com/sql-formatter/dist/sql-formatter.min.js"></script>
@@ -872,7 +956,9 @@ span.search-result-highlight {
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7Q6CLV" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
-<!-- New Navbar -->
+
+<!-- Navbar -->
+    <!-- New Navbar -->
       <nav>
         <div class="header-nav-wrapper">
           <section class="header-utility nav-3 background-grayLight color-navy d-none d-xl-flex">
@@ -883,6 +969,22 @@ span.search-result-highlight {
                     <a href="https://teradata.com" target="_blank" class="tcom">Teradata.com</a>
                   </li>
                 </ul>
+                <div class="td-language-selector dropdown1">
+                  <button onclick="langOptions()" class="td-language-selector__toggle selected">
+                    Global 
+                  </button>
+                  <div id="myDropdown" class="nav-2 td-language-selector__dropdown dropdown-content1">
+                    <li lang="en-US" class="td-language-selector__menu-item">
+                      <a href="#" class="td-language-selector__location no-underline active-lan">Global</a>
+                    </li>
+                    <li lang="ja-JP" class="td-language-selector__menu-item" onclick="switchLanguage('ja')">
+                      <a href="#" class="td-language-selector__location no-underline">日本</a>
+                    </li>
+                    <li lang="es-MX" class="td-language-selector__menu-item" onclick="switchLanguage('es')">
+                      <a href="#" class="td-language-selector__location no-underline">Español</a>
+                    </li>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -910,7 +1012,8 @@ span.search-result-highlight {
                       <li>
                         <button href="" onclick="docs()" class="header-nav__main-menu__link dropbtn">Docs</button>
                         <div id="myDocsDropdown" class="dropdown-content">
-                          <a href="https://docs.teradata.com/p/VantageCloud/Lake" class="dropdown-item mt">VantageCloud Lake Documentation</a>
+                          <a href="https://docs.teradata.com/p/VantageCloud/Lake" class="dropdown-item"  style="margin-top: 30px;">VantageCloud Lake Documentation</a>
+                          <a href="https://developers.teradata.com/ai-unlimited/" class="dropdown-item">AI Unlimited</a>
                           <a href="https://docs.teradata.com/" class="dropdown-item">All Documentation</a> 
                         </div>  
                       </li>
@@ -934,7 +1037,16 @@ span.search-result-highlight {
                       </li>
                     </ul>  
                     <div class="head-nav__alt-menu-wrapper header-nav__element">
+                    
                       <ul class="header-nav__alt-menu d-flex justify-content-end list">
+                        <li class="button-free-demo">
+                          <a class="call-to-action-button-secondary" href="https://www.teradata.com/getting-started/demos/clearscape-analytics" target="_blank" title="Browse Content" rel="nofollow">
+                            Try for free
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <path d="M9.35008 11.9669L8.63341 11.2669L11.4334 8.46686H2.66675V7.46686H11.4334L8.61675 4.6502L9.33341 3.9502L13.3501 7.96686L9.35008 11.9669Z" fill="#00233C"/>
+                            </svg>
+                          </a>  
+                        </li>
                         <li>
                           <section class="navbar-search" id="searchtextbox"> 
                             <div class="navbar-item">
@@ -1000,6 +1112,9 @@ span.search-result-highlight {
                               <a class="nav-2 py-4 d-block color-slate" href="https://docs.teradata.com/p/VantageCloud/Lake">VantageCloud Lake Documentation</a>
                             </li>
                             <li>
+                              <a class="nav-2 py-4 d-block color-slate" href="https://developers.teradata.com/ai-unlimited/">AI Unlimited</a>
+                            </li>
+                            <li>
                               <a class="nav-2 py-4 d-block color-slate" href="https://docs.teradata.com/">All Documentation</a>
                             </li>
                           </ul>
@@ -1045,6 +1160,14 @@ span.search-result-highlight {
                     </li>
                   </ul>
                   <footer>
+                    <div class="container-wide header-nav-mobile__menu-listing-ul" style="padding: 14px 16px;">
+                     <a class="call-to-action-button-secondary" href="https://www.teradata.com/getting-started/demos/clearscape-analytics" target="_blank" title="Browse Content" rel="nofollow">
+                      Try for free
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M9.35008 11.9669L8.63341 11.2669L11.4334 8.46686H2.66675V7.46686H11.4334L8.61675 4.6502L9.33341 3.9502L13.3501 7.96686L9.35008 11.9669Z" fill="#00233C"></path>
+                      </svg>
+                     </a>  
+                    </div>
                     <div class="header-nav-mobile__sub-menu background-grayLight mt-6 py-6 container-wide">
                       <ul class="row list">
                         <li class="col-6">
@@ -1059,15 +1182,80 @@ span.search-result-highlight {
              <div class="page-blackout"></div>
           </section>
         </div>
-
       </nav>
   </nav>
+  <style>
+    .active-lan{
+      pointer-events: none; 
+      cursor: not-allowed;
+    }
+  </style>  <!-- Navbar -->
+
+<!-- Possible Banner -->
+<div class="possible-banner-2">
+  <div class="text-section">
+      <p class="text-1">
+        <span class="display-1">If you imagine it, envision it, create it... Teradata makes it Possible. Join us. </span>
+        <span class="display-2">"If you imagine it...Teradata makes it Possible. </span>
+        <a class="register-now" href="https://www.teradata.com/events/possible" target="_blank" aria-label="If you imagine it, envision it, create it... Teradata makes it Possible. Join us." data-gtm-category="banner" data-gtm-action="leaderboard" data-gtm-label="Register now" data-intellimize-exp-417218923="true">
+          Register now.
+        </a> 
+      </p>
+  </div>
+</div>
+<style>
+.possible-banner-2{
+  background: #DFE1F9;
+  position: relative;
+  height: 50px;
+  top: 20px;
+  flex-shrink: 0;
+  display:none;
+}
+.text-section{
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+}
+.text-1{
+  color: #171A2C;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.register-now{
+  color: #171A2C;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+  .display-2{
+    display: none;
+  }
+@media (max-width: 600px) {
+  .text-section {
+    padding: 1px 0px 1px 0px;  
+  }
+  .display-1{
+    display: none;
+  }
+  .display-2{
+    display: block;
+  }
+}
+</style><!-- Possible Banner -->
 
   <script>
     var sectionElement = document.querySelector(".navbar-search");
     var devElement = document.querySelector(".dev");
     if (sectionElement.innerHTML.trim() === "") {
-      devElement.style.marginRight = "-225px"; 
+      devElement.style.marginRight = "-65px"; 
     }
 
     /* Script for desktop dropdowns */
@@ -1185,11 +1373,118 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
   </script>
-<div class="body">
+<style>
+  .active-lan{
+    color: #ff5f02;
+    font-weight: 600;
+  }
+  .dropdown1 {
+    position: relative;
+    display: inline-block;
+  }
+  .td-language-selector {
+    position: relative;
+    padding: 6px 0;
+  }
+    .td-language-selector__toggle {
+    color: inherit;
+    align-items: center;
+    position: relative;
+    width: auto;
+    padding: 0 1.2rem;
+    display: flex;
+    z-index: 1;
+    transition: .25s;
+  }
+  .td-language-selector ul {
+    background: #f6f7fb;
+    border-radius: 2px;
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    color: #333a3e;
+    position: absolute;
+    top: 150%;
+    right: 0;
+    padding: 28px 32px;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .25s ease;
+  }
+  .dropdown-content1 {
+    display: none;
+    position: absolute;
+    background: #f6f7fb;
+    min-width: 124px; 
+    overflow: auto;
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    z-index: 1;
+    top: 150%;
+    right: 0;
+    padding: 28px 32px;
+    transition: all .25s ease;
+  }
+  .show {display: block;}
+
+  .me-4 {
+    margin-right: 1rem!important;
+  }
+</style><div class="body">
 <div class="nav-container">
   <aside class="nav">
     <div class="panels">
-<div class="nav-panel-explore is-active" data-panel="explore">
+
+
+<script>
+  var path = document.location.href;
+  var matchResult = path.match(/\/(es|ja)\//);
+  var language;
+  if (matchResult) {
+    language = matchResult[1];
+  } else {
+    language = 'en';
+  }
+  console.log("language: ",language);
+  if (language === 'en'){
+    document.getElementById('ja').style.visibility = 'hidden';
+    document.getElementById('ja').style.display = 'none';
+    document.getElementById('es').style.visibility = 'hidden';
+    document.getElementById('es').style.display = 'none';
+  }
+
+  if (language === 'ja'){
+    document.getElementById('en').style.visibility = 'hidden';
+    document.getElementById('en').style.display = 'none';
+    document.getElementById('es').style.visibility = 'hidden';
+    document.getElementById('es').style.display = 'none';
+  }
+
+   if (language === 'es'){
+      document.getElementById('en').style.visibility = 'hidden';
+      document.getElementById('en').style.display = 'none';
+      document.getElementById('ja').style.visibility = 'hidden';
+      document.getElementById('ja').style.display = 'none';
+    }
+
+
+  var parts = path.split('/');
+  var pagina = parts[parts.length-2];
+  var elementosMenu = document.querySelectorAll('.nav-item a');
+  elementosMenu.forEach(function(elemento) {
+    if (elemento.href === path) {
+      elemento.parentNode.classList.add('is-current-page');
+    }
+  });
+</script>
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.nav-item-toggle');
+    buttons.forEach((button, index) => {
+        button.setAttribute('aria-label', `Toggle Button ${index + 1}`);
+    });
+});
+
+</script><div class="nav-panel-explore is-active" data-panel="explore">
   <ul class="components">
     <li class="component">
       <a class="title" href="/index.html">Getting Started Guides</a>
@@ -1205,11 +1500,49 @@ document.addEventListener("DOMContentLoaded", function () {
   </aside>
 </div>
 <main class="article">
+    <div id="disclaimer">
+    <div class="section-1">
+        <img src="/_/img/language.svg" alt="Imagen" height="24px" width="24px">
+    </div>
+  <div class="section-2">
+    <span id="message"></span>
+  </div>
+  <div class="section-3">
+    <button href="" onclick="openMTD()" class="info">
+        <span id="info"></span>
+    </button>
+    <div id="mtModal" class="modal">
+        <div id="overlay"></div>
+        <div class="MTDcontent">
+            <p class="popup-header-text" id="header"></p>
+            <div class="cancel">
+                <button class="cancelbtn" onclick="closeMTD()">
+                    <span class="closeMT">&times;</span>
+                </button>
+            </div>
+            <div class="td-reader-popup-spacer"></div>
+            <p class="td-popup-body-text" id="content"></p>
+            <div class="btnspace">
+                <button onclick="closeMTD()" class="call-to-action-button">
+                    <span id="close"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="section-4">
+    <button onclick="hideDisclaimer()">
+        <img src="/_/img/close.svg" alt="Imagen" height="14px" width="14px">
+    </button>
+  </div>
+</div>
+ 
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
 </nav>
 </div>
+
   <div class="content">
 <article class="doc">
 <h1 class="page">Page Not Found</h1>
@@ -1224,7 +1557,7 @@ If you typed the URL of this page manually, please double check that you entered
   </div>
 </main>
 </div>
-<!-- Footer SVGs -->
+  <!-- Footer SVGs -->
 <svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   style="position: absolute; width: 0; height: 0; overflow: hidden;">
   <defs>
@@ -1274,7 +1607,20 @@ If you typed the URL of this page manually, please double check that you entered
 </svg>
 
 
-<!--Old Footer markup -->
+<section class="linksOfInterest">
+  <div class="linksOfInterestTitle">Also of interest</div>
+  <ul>
+    <li class="linkOfInterest_1">
+      <a class="footerNavLink" href="https://www.teradata.com/platform/ai-ml" target="_self" rel="noreferrer">Drive ROI with Trusted AI today</a>
+    </li>
+    <li class="linkOfInterest_1">
+      <a class="footerNavLink" href="https://www.teradata.com/solutions/big-data" target="_self" rel="noreferrer">Big data</a>
+    </li>
+    <li class="linkOfInterest_1">
+      <a class="footerNavLink" href="https://www.teradata.com/insights/data-security" target="_self" rel="noreferrer">Become an expert at defending your data</a>
+    </li>
+  </ul>
+</section>
 
 <!-- New Footer -->
  <!--footer-->
@@ -1286,7 +1632,15 @@ If you typed the URL of this page manually, please double check that you entered
                 <span class="h4 fontWeight-semiBold">Who we help</span>
                   <ul class="list">
                     <li>
+                      <a href="https://www.teradata.com/trusted-ai" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Trusted AI | /trusted-ai">
+                        Trusted AI
+                      </a>
+                    </li>
+                    <li>
                       <a href="https://www.teradata.com/Who-We-Help" data-celebrus="Footer Menu - Roles" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Roles | /Who-We-Help">Roles</a>
+                    </li>
+                    <li>
+                      <a href="https://www.teradata.com/Industries" data-celebrus="Footer Menu - Industries" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Industries | /Industries">Industries</a>
                     </li>
                     <li>
                       <a href="https://www.teradata.com/Partners" data-celebrus="Footer Menu - Partners" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Partners | /Partners">Partners</a>
@@ -1306,10 +1660,13 @@ If you typed the URL of this page manually, please double check that you entered
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.teradata.com/Industries" data-celebrus="Footer Menu - Industries" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Industries | /Industries">Industries</a>
+                      <a href="https://www.teradata.com/solutions/business-use-cases" data-celebrus="Footer Menu - Solutions">Solutions</a>
                     </li>
                     <li>
                       <a href="https://www.teradata.com/Customers" data-celebrus="Footer Menu - Success stories" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Success stories | /Customers">Success stories</a>
+                    </li>
+                    <li>
+                      <a href="https://www.teradata.com/how-we-help/teradata-services" data-celebrus="Footer Menu - Services">Services</a>
                     </li>
                   </ul>
                 </div>
@@ -1322,15 +1679,18 @@ If you typed the URL of this page manually, please double check that you entered
                         <a href="https://www.teradata.com/Platform" data-celebrus="Footer Menu - Platform" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Platform | /Platform">Platform</a>
                       </li>
                       <li>
-                        <a href="https://www.teradata.com/Platform/Use-Cases" data-celebrus="Footer Menu - Use cases" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Use cases | /Platform/Use-Cases">Use cases</a>
-                      </li>
-                      <li>
                         <a href="https://www.teradata.com/Platform/VantageCloud" data-celebrus="Footer Menu - VantageCloud" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="VantageCloud | /Platform/VantageCloud">VantageCloud</a>
                       </li>
                       <li>
                         <a href="https://www.teradata.com/Platform/ClearScape-Analytics" data-celebrus="Footer Menu - ClearScape Analytics" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="ClearScape Analytics | /Platform/ClearScape-Analytics">ClearScape Analytics</a>
                       </li>
                       <li>
+                        <a class="nav-2" href="https://www.teradata.com/platform/ai-ml" data-celebrus="">Unleash AI Innovation</a>
+                      </li>
+                      <li>
+                        <a href="https://www.teradata.com/platform/workloads" data-celebrus="Footer Menu - Workloads" >Workloads</a>
+                      </li>
+                     <li>
                         <a href="https://www.teradata.com/Platform/Deployment" data-celebrus="Footer Menu - Deployment" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Deployment | /Platform/Deployment">Deployment
                         </a>
                       </li>
@@ -1377,23 +1737,19 @@ If you typed the URL of this page manually, please double check that you entered
                             </a>
                           </li>
                           <li>
-                            <a href="https://www.teradata.com/Insights?Topics=Big-Data" data-celebrus="Footer Menu - Big Data" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Big Data | /Insights?Topics=Big-Data">Big Data
+                            <a href="https://www.teradata.com/insights/cloud-data-analytics" data-celebrus="Footer Menu - Big Data" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Big Data | /Insights?Topics=Big-Data">Cloud data analytics
                             </a>
                           </li>
                           <li>
-                            <a href="https://www.teradata.com/Insights?Topics=Cloud" data-celebrus="Footer Menu - Cloud" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Cloud | /Insights?Topics=Cloud">Cloud
+                            <a href="https://www.teradata.com/insights/data-architecture" data-celebrus="Footer Menu - Cloud" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Cloud | /Insights?Topics=Cloud">Data architecture
                             </a>
                           </li>
                           <li>
-                            <a href="https://www.teradata.com/Insights?Topics=Data-Analytics" data-celebrus="Footer Menu - Data Analytics" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Data Analytics | /Insights?Topics=Data-Analytics">Data Analytics
+                            <a href="https://www.teradata.com/insights/data-platform" data-celebrus="Footer Menu - Data Analytics" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Data Analytics | /Insights?Topics=Data-Analytics">Data platform
                             </a>
                           </li>
                           <li>
-                            <a href="https://www.teradata.com/Insights?Topics=Data-Management" data-celebrus="Footer Menu - Data Management" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Data Management | /Insights?Topics=Data-Management">Data Management
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.teradata.com/Insights?Topics=Data-Science" data-celebrus="Footer Menu - Data Science" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Data Science | /Insights?Topics=Data-Science">Data Science
+                            <a href="https://www.teradata.com/insights/data-security" data-celebrus="Footer Menu - Data Management" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Data Management | /Insights?Topics=Data-Management">Data security
                             </a>
                           </li>
                           <li>
@@ -1491,12 +1847,29 @@ If you typed the URL of this page manually, please double check that you entered
                               <span class="icon caret"></span>
                           </summary>
                           <ul class="pb-4 list">
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/trusted-ai" data-gtm-category="Footer" data-gtm-action="footer nav click" data-gtm-label="Trusted AI | /trusted-ai">Trusted AI</a></li>
                               <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Who-We-Help" data-celebrus="">Roles</a></li>
-                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Partners" data-celebrus="">Partners</a></li>
-                              <li class="my-3"><a class="nav-2" href="https://teradata.my.site.com/teradataPRM/s/self-registration" data-celebrus="" target="_blank" rel="noopener">Partner registration</a></li>
-                              <li class="my-3"><a class="nav-2" href="https://teradata.my.site.com/teradataPRM/s/login/" data-celebrus="" target="_blank" rel="noopener">Partner portal login</a></li>
                               <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Industries" data-celebrus="">Industries</a></li>
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Partners" data-celebrus="">Partners</a></li>
+                              <li class="my-3">
+                                <a class="nav-2" href="https://teradata.my.site.com/teradataPRM/s/self-registration" data-celebrus="" target="_blank" rel="noopener">
+                                  Partner registration
+                                  <span class="material-symbols-outlined md-16 ms-2">
+                                    <img src="/_/img/small-external.svg" alt="External Icon" width="" height="">
+                                  </span>
+                                </a>
+                              </li>
+                              <li class="my-3">
+                                <a class="nav-2" href="https://teradata.my.site.com/teradataPRM/s/login/" data-celebrus="" target="_blank" rel="noopener">
+                                  Partner portal login
+                                  <span class="material-symbols-outlined md-16 ms-2">
+                                    <img src="/_/img/small-external.svg" alt="External Icon" width="" height="">
+                                  </span>
+                                </a>
+                              </li>
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/solutions/business-use-cases" >Solutions</a></li>
                               <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Customers" data-celebrus="">Success stories</a></li>
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/how-we-help/teradata-services">Services</a></li>
                           </ul>
                       </details>
                       <details>
@@ -1506,10 +1879,11 @@ If you typed the URL of this page manually, please double check that you entered
                           </summary>
                           <ul class="pb-4 list">
                               <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform" data-celebrus="">Platform</a></li>
-                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform/Use-Cases" data-celebrus="">Use cases</a></li>
-                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform/VantageCloud" data-celebrus="">VantageCloud</a></li>
                               <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform/ClearScape-Analytics" data-celebrus="">ClearScape Analytics</a></li>
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/platform/ai-ml" data-celebrus="">Unleash AI Innovation</a></li>
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform/Use-Cases" data-celebrus="">Use cases</a></li>
                               <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform/Deployment" data-celebrus="">Deployment</a></li>
+                              <li class="my-3"><a class="nav-2" href="https://www.teradata.com/Platform/VantageCloud" data-celebrus="">VantageCloud</a></li>
                           </ul>
                       </details>
                       <details>
@@ -1606,7 +1980,7 @@ If you typed the URL of this page manually, please double check that you entered
   
           <div class="row footer-nav__baseline border-top-medium">
               <div class="col-12 col-lg-3 col-xl-4 px-lg-0">
-                  <span class="copyright">©2023 Teradata. All Rights Reserved</span>
+                  <span class="copyright">©2024 Teradata. All Rights Reserved</span>
               </div>
               <div class="col-12 col-lg-9 col-xl-8 d-flex justify-content-lg-end px-lg-0">
                   <ul class="d-flex flex-wrap justify-content-between nav-2 list">
